@@ -12,7 +12,7 @@ function LoginBox() {
       <form className="login-container__box">
         <label>Usuário</label>
         <input type="text" placeholder="Usuário" />
-        <label>Senhaa</label>
+        <label>Senha</label>
         <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
       </form>

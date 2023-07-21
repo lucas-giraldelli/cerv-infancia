@@ -1,1 +1,1 @@
-export { default } from './LoginHero.tsx';
+export { default } from './LoginHero';
