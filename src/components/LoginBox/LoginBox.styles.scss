@@ -1,0 +1,59 @@
+.logo {
+  width: 100%;
+  padding: 0 3.5em;
+
+  @media (width < 38em) {
+    padding: 0 1.25em;
+  }
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1rem;
+
+    margin: 5em 0;
+    padding: 3em 2.3em 0;
+
+    width: clamp(20em, 22em, 90vw);
+    height: clamp(20em, 22em, 90vw);
+
+    background: #ffffff;
+    border-radius: 2.5em;
+
+    & > label {
+      margin: 0 0 0.625em;
+    }
+
+    & > input {
+      height: 3.3em;
+      margin: 0 0 2em;
+      padding: 0 1em;
+
+      background: #efefef;
+      border-radius: 1em;
+    }
+
+    & > button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      place-self: center;
+      height: 2.6em;
+      width: 12em;
+
+      cursor: pointer;
+
+      background: #67abae;
+      border-radius: 1em;
+    }
+  }
+}
