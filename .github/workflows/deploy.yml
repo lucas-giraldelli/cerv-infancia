@@ -5,13 +5,12 @@ name: Deploying Application
 
 on:
   push: # the push: ensures the workflow is executed for both push or closing of a pull request to the specified branch
-    branches: [ "main" ] #you can change the branch name to your preferred branch e.g :"deploy"
+    branches: ['main'] #you can change the branch name to your preferred branch e.g :"deploy"
   #pull_request: # the pull_request: ensures the workflow is executed when a pull request is opened on the specified branch
-    #branches: [ "main" ]
+  #branches: [ "main" ]
 
 jobs:
   build:
-
     runs-on: self-hosted
 
     strategy:
@@ -20,13 +19,13 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    #- run: cp .env.example .env
-    - run: npm i
-    - run: npm run build --if-present
-    - run: cp -r /home/lucas-giraldelli/git-runners/actions-runner/_work/cerv-infancia/cerv-infancia/dist/. /var/www/html #copies contents of the build/dist folder to the '/var/www/web-app-name' folder where it will be served up
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      #- run: cp .env.example .env
+      - run: npm i
+      - run: npm run build --if-present
+      - run: cp -r /home/lucas-giraldelli/git-runners/actions-runner/_work/cerv-infancia/cerv-infancia/dist/. /var/www/html
