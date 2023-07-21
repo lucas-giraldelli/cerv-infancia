@@ -12,8 +12,8 @@ function LoginBox() {
       <form className="login-container__box">
         <label>Usuário</label>
         <input type="text" placeholder="Nome do usuário" />
-        <label>Senha</label>
-        <input type="password" placeholder="Sua senha" />
+        <label>Senhaa</label>
+        <input type="password" placeholder="Insira sua senha" />
         <button type="submit">Entrar</button>
       </form>
     </div>
