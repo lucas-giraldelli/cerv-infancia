@@ -28,4 +28,4 @@ jobs:
       #- run: cp .env.example .env
       - run: npm i
       - run: npm run build --if-present
-      - run: cp -r /home/lucas-giraldelli/git-runners/actions-runner/_work/cerv-infancia/cerv-infancia/dist/. /var/www/html
+      - run: cp -r /home/actions-runner/_work/cerv-infancia/cerv-infancia/dist/. /var/www/html
