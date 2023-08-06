@@ -37,5 +37,4 @@ module.exports = {
       typescript: {},
     },
   },
-  indent: ['error', 2],
-}
+};
