@@ -4,6 +4,8 @@
   font-family: 'Roboto', sans-serif;
   --color-background: hsl(300, 19%, 63%);
   --font-display: 'Roboto';
+  --primary-background: hsl(300, 19%, 63%);
+  --sidebar-background: hsl(234, 8%, 23%);
 }
 
 html {
