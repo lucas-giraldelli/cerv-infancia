@@ -1,4 +1,3 @@
-import LoginBox from '../../components/LoginBox';
 import './Login.styles.scss';
 
 function LoginPage() {
