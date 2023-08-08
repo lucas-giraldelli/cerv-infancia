@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import SideMenu from '../../components/SideMenu/SideMenu';
 
 import './ProtectedLayout.styles.scss';
 
@@ -11,7 +12,9 @@ export default function ProtectedLayout() {
 
   return (
     <div className="container">
-      <nav className="side-menu"></nav>
+      <nav className="side-menu">
+        <SideMenu />
+      </nav>
       <div className="main-container">
         <header className="header">
           <h1>Cabeçalho</h1>
