@@ -6,7 +6,7 @@ interface TabProps extends HTMLElement {
 
 function Tab({ children, ...props }: TabProps) {
   const tabStyle = `tab ${
-    window.location.pathname === props.href && `tabActive`
+    window.location.pathname === props.href ? `tabActive` : `tabInactive`
   }`;
 
   return (
