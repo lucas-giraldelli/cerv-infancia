@@ -1,16 +1,14 @@
 import './Tab.styles.scss';
 
-interface TabProps extends HTMLElement {
-  href: string;
-}
+interface TabProps extends HTMLAnchorElement {}
 
-function Tab({ children, ...props }: TabProps) {
+function Tab({ children, href }: TabProps) {
   const tabStyle = `tab ${
-    window.location.pathname === props.href ? `tabActive` : `tabInactive`
+    window.location.pathname === href ? `tabActive` : `tabInactive`
   }`;
 
   return (
-    <a href={props.href} className={tabStyle}>
+    <a href={href} className={tabStyle}>
       {children}
     </a>
   );
