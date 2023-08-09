@@ -1,6 +1,9 @@
 import './MenuTab.styles.scss';
 
-interface MenuTabProps extends HTMLAnchorElement {}
+interface MenuTabProps
+  extends React.PropsWithChildren<React.ComponentPropsWithRef<'a'>> {
+  extraProp?: string;
+}
 
 function MenuTab({ children, href }: MenuTabProps) {
   const tabStyle = `tab ${

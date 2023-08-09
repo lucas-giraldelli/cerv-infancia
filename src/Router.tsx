@@ -1,7 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
-import LoginPage from './pages/Login';
-import HomePage from './pages/Home';
+
 import ProtectedLayout from './layouts/ProtectedLayout';
+import HomePage from './pages/Home';
+import LoginPage from './pages/Login';
 
 export function Router() {
   return (
