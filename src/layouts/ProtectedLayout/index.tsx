@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+
 import SideMenu from '../../components/SideMenu/SideMenu';
 
 import './ProtectedLayout.styles.scss';

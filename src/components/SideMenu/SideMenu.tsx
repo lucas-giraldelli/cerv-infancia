@@ -1,8 +1,9 @@
 import './SideMenu.styles.scss';
 import ChurchIcon from '@mui/icons-material/Church';
-import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
-import Tab from './Tab';
+import SettingsIcon from '@mui/icons-material/Settings';
+
+import MenuTab from './MenuTab';
 
 function SideMenu() {
   return (
@@ -11,20 +12,20 @@ function SideMenu() {
         <h2>Menu</h2>
       </div>
       <nav className="tabsContainer navigation">
-        <Tab href="/">
+        <MenuTab href="/">
           <ChurchIcon />
           <span>Início</span>
-        </Tab>
+        </MenuTab>
       </nav>
       <nav className="tabsContainer configs">
-        <Tab href="/config">
+        <MenuTab href="/config">
           <SettingsIcon />
           <span>Configurações</span>
-        </Tab>
-        <Tab href="/login">
+        </MenuTab>
+        <MenuTab href="/login">
           <LogoutIcon />
           <span>Sair</span>
-        </Tab>
+        </MenuTab>
       </nav>
     </div>
   );

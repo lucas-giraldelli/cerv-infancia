@@ -1,8 +1,8 @@
-import './Tab.styles.scss';
+import './MenuTab.styles.scss';
 
-interface TabProps extends HTMLAnchorElement {}
+interface MenuTabProps extends HTMLAnchorElement {}
 
-function Tab({ children, href }: TabProps) {
+function MenuTab({ children, href }: MenuTabProps) {
   const tabStyle = `tab ${
     window.location.pathname === href ? `tabActive` : `tabInactive`
   }`;
@@ -14,4 +14,4 @@ function Tab({ children, href }: TabProps) {
   );
 }
 
-export default Tab;
+export default MenuTab;
