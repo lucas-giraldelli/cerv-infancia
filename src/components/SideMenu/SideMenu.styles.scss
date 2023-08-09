@@ -1,0 +1,28 @@
+.sideMenu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8.75em;
+
+  h2 {
+    color: #a4a6b3;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+
+.tabsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.navigation {
+  border-bottom: 1px solid rgba(223, 224, 235, 0.1);
+  margin-bottom: 2em;
+}
