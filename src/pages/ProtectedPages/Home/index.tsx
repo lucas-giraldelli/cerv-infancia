@@ -1,6 +1,6 @@
 import './Login.styles.scss';
 
-function LoginPage() {
+function HomePage() {
   return (
     <main>
       <h1>Home Sweet Home</h1>
@@ -8,4 +8,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default HomePage;

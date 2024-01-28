@@ -1,11 +1,12 @@
 import './MenuTab.styles.scss';
 
-interface MenuTabProps
-  extends React.PropsWithChildren<React.ComponentPropsWithRef<'a'>> {
+type MenuTabProps = {
   extraProp?: string;
-}
+} & React.PropsWithChildren<React.ComponentPropsWithRef<'a'>>;
 
-function MenuTab({ children, href }: MenuTabProps) {
+function MenuTab(props: MenuTabProps) {
+  const { children, href } = props;
+
   const tabStyle = `tab ${
     window.location.pathname === href ? `tabActive` : `tabInactive`
   }`;

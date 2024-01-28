@@ -33,7 +33,7 @@
     "eslint-plugin-react": "^7.33.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "million": "^2.5.4-beta.2",
+    "million": "2.6.4",
     "prettier": "^3.0.0",
     "sass": "^1.64.0",
     "typescript": "^5.0.0",
