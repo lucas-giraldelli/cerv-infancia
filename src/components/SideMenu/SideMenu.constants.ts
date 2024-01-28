@@ -24,7 +24,7 @@ export const tabMenu = [
   {
     name: 'Visita aos Lares',
     icon: FamilyRestroomIcon,
-    href: '/visitas',
+    href: '/visita',
   },
   {
     name: 'Lista de chamada',
