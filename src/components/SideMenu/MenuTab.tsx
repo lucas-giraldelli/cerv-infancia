@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom';
 import './MenuTab.styles.scss';
 
 type MenuTabProps = {
@@ -7,14 +8,16 @@ type MenuTabProps = {
 function MenuTab(props: MenuTabProps) {
   const { children, href } = props;
 
+  const { state } = useLocation();
+
   const tabStyle = `tab ${
-    window.location.pathname === href ? `tabActive` : `tabInactive`
+    state?.location === href ? `tabActive` : `tabInactive`
   }`;
 
   return (
-    <a href={href} className={tabStyle}>
+    <Link to={href || '/'} className={tabStyle} state={{ location: href }}>
       {children}
-    </a>
+    </Link>
   );
 }
 
