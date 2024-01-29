@@ -14,17 +14,14 @@ function SideMenu() {
         <h2>Menu</h2>
       </div>
       <For each={menuItems} as="div">
-        {(item) => {
-          const { href, name, icon: MenuIcon } = item;
-          return (
-            <nav key={item.href} className="tabsContainer navitagion">
-              <MenuTab href={href}>
-                <MenuIcon />
-                <span>{name}</span>
-              </MenuTab>
-            </nav>
-          );
-        }}
+        {({ href, name, icon: MenuIcon }) => (
+          <nav key={href} className="tabsContainer navitagion">
+            <MenuTab href={href}>
+              <MenuIcon />
+              <span>{name}</span>
+            </MenuTab>
+          </nav>
+        )}
       </For>
       <hr />
       <>

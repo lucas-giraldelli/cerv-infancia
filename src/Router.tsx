@@ -10,10 +10,9 @@ export function Router() {
       <Route path="/login" element={<LoginPage />} />
 
       <Route path="/" element={<ProtectedLayout />}>
-        {menuItems.map((item) => {
-          const { href, component: Element } = item;
-          return <Route key={href} path={href} element={<Element />} />;
-        })}
+        {menuItems.map(({ href, component: Element }) => (
+          <Route key={href} path={href} element={<Element />} />
+        ))}
       </Route>
     </Routes>
   );
