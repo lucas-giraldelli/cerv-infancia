@@ -1,9 +1,9 @@
-import './Login.styles.scss';
+import './HomePage.styles.scss';
 
 function HomePage() {
   return (
     <main>
-      <h1>Home Sweet Home</h1>
+      <h1>Início</h1>
     </main>
   );
 }

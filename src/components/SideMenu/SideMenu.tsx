@@ -5,7 +5,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import { For } from 'million/react';
 
 import MenuTab from './MenuTab';
-import { tabMenu } from './SideMenu.constants';
+import { menuItems } from '../../shared/constants';
 
 function SideMenu() {
   return (
@@ -13,7 +13,7 @@ function SideMenu() {
       <div className="titleBox">
         <h2>Menu</h2>
       </div>
-      <For each={tabMenu} as="div">
+      <For each={menuItems} as="div">
         {(item) => {
           const { href, name, icon: MenuIcon } = item;
           return (

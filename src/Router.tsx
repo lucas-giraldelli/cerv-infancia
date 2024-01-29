@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import ProtectedLayout from './layouts/ProtectedLayout';
 import LoginPage from './pages/Login';
-import HomePage from './pages/ProtectedPages/Home';
+import { menuItems } from './shared/constants';
 
 export function Router() {
   return (
@@ -10,7 +10,10 @@ export function Router() {
       <Route path="/login" element={<LoginPage />} />
 
       <Route path="/" element={<ProtectedLayout />}>
-        <Route path="/" element={<HomePage />} />
+        {menuItems.map((item) => {
+          const { href, component: Element } = item;
+          return <Route key={href} path={href} element={<Element />} />;
+        })}
       </Route>
     </Routes>
   );
