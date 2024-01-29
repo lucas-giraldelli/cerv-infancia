@@ -1,9 +1,11 @@
 import './SideMenu.styles.scss';
-import ChurchIcon from '@mui/icons-material/Church';
+
 import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { For } from 'million/react';
 
 import MenuTab from './MenuTab';
+import { menuItems } from '../../shared/constants';
 
 function SideMenu() {
   return (
@@ -11,22 +13,29 @@ function SideMenu() {
       <div className="titleBox">
         <h2>Menu</h2>
       </div>
-      <nav className="tabsContainer navigation">
-        <MenuTab href="/">
-          <ChurchIcon />
-          <span>Início</span>
-        </MenuTab>
-      </nav>
-      <nav className="tabsContainer configs">
-        <MenuTab href="/config">
-          <SettingsIcon />
-          <span>Configurações</span>
-        </MenuTab>
-        <MenuTab href="/login">
-          <LogoutIcon />
-          <span>Sair</span>
-        </MenuTab>
-      </nav>
+      <For each={menuItems} as="div">
+        {({ href, name, icon: MenuIcon }) => (
+          <nav key={href} className="tabsContainer navitagion">
+            <MenuTab href={href}>
+              <MenuIcon />
+              <span>{name}</span>
+            </MenuTab>
+          </nav>
+        )}
+      </For>
+      <hr />
+      <>
+        <nav className="tabsContainer configs">
+          <MenuTab href="/config">
+            <SettingsIcon />
+            <span>Configurações</span>
+          </MenuTab>
+          <MenuTab href="/login">
+            <LogoutIcon />
+            <span>Sair</span>
+          </MenuTab>
+        </nav>
+      </>
     </div>
   );
 }

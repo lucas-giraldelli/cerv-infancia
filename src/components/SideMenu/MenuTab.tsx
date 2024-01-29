@@ -1,19 +1,21 @@
+import { Link, useLocation } from 'react-router-dom';
 import './MenuTab.styles.scss';
 
-interface MenuTabProps
-  extends React.PropsWithChildren<React.ComponentPropsWithRef<'a'>> {
+type MenuTabProps = {
   extraProp?: string;
-}
+} & React.PropsWithChildren<React.ComponentPropsWithRef<'a'>>;
 
-function MenuTab({ children, href }: MenuTabProps) {
-  const tabStyle = `tab ${
-    window.location.pathname === href ? `tabActive` : `tabInactive`
-  }`;
+function MenuTab(props: MenuTabProps) {
+  const { children, href } = props;
+
+  const { pathname } = useLocation();
+
+  const tabStyle = `tab ${pathname === href ? `tabActive` : `tabInactive`}`;
 
   return (
-    <a href={href} className={tabStyle}>
+    <Link to={href || '/'} className={tabStyle}>
       {children}
-    </a>
+    </Link>
   );
 }
 

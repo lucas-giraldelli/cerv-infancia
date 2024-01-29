@@ -2,10 +2,29 @@
 
 :root {
   font-family: 'Roboto', sans-serif;
-  --color-background: hsl(300, 19%, 63%);
   --font-display: 'Roboto';
+
+  /** Default vars */
+  --color-background: hsl(300, 19%, 63%);
   --primary-background: hsl(300, 19%, 63%);
   --sidebar-background: hsl(234, 8%, 23%);
+
+  /** Html element vars */
+  --primary-hr-color: hsl(234, 7%, 27%);
+  --primary-h2-color: hsl(232, 9%, 67%);
+
+  /** Component vars */
+  --primary-tab-color: hsl(232, 9%, 67%);
+
+  --tab-active-color: hsl(231, 100%, 93%);
+  --tab-active-bg-color: hsl(234, 7%, 27%);
+  --tab-active-bg-color-100: hsl(234, 7%, 29%);
+
+  --tab-inactive-bg-color: hsl(233, 8%, 23%);
+  --tab-inactive-bg-color-600: hsl(233, 8%, 21%);
+
+  /** Utility vars */
+  --text-shadow-color: hsla(0, 0%, 0%, 0.25);
 }
 
 html {

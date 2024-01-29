@@ -2,6 +2,19 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  hr {
+    border: 1px solid var(--primary-hr-color);
+    margin-bottom: 2.1875em;
+    margin-top: 0.625em;
+  }
+
+  /**
+  *   Make this work for
+  *   chaning routes probably
+  *   using motion framer (?)
+  */
+  transition: padding 500ms ease;
 }
 
 .titleBox {
@@ -11,18 +24,19 @@
   height: 8.75em;
 
   h2 {
-    color: #a4a6b3;
+    color: var(--primary-h2-color);
     font-size: 1.25rem;
     font-weight: 500;
   }
 }
 
-.tabsContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-}
+nav {
+  .tabsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-.navigation {
-  border-bottom: 1px solid rgba(223, 224, 235, 0.1);
-  margin-bottom: 2em;
+  .navigation {
+    margin-bottom: 2em;
+  }
 }
