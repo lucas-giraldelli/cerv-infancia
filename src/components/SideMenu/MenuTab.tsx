@@ -8,14 +8,12 @@ type MenuTabProps = {
 function MenuTab(props: MenuTabProps) {
   const { children, href } = props;
 
-  const { state } = useLocation();
+  const { pathname } = useLocation();
 
-  const tabStyle = `tab ${
-    state?.location === href ? `tabActive` : `tabInactive`
-  }`;
+  const tabStyle = `tab ${pathname === href ? `tabActive` : `tabInactive`}`;
 
   return (
-    <Link to={href || '/'} className={tabStyle} state={{ location: href }}>
+    <Link to={href || '/'} className={tabStyle}>
       {children}
     </Link>
   );
