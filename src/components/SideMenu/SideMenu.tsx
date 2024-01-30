@@ -5,7 +5,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import { For } from 'million/react';
 
 import MenuTab from './MenuTab';
-import { menuItems } from '../../shared/constants';
+import { menuItems } from '../../constants/SideMenu.constants';
 
 function SideMenu() {
   return (
