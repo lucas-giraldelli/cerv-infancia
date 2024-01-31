@@ -1,15 +1,15 @@
-import ChurchIcon from '@mui/icons-material/Church';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import SchoolIcon from '@mui/icons-material/School';
 
 import BookHeart from '../assets/svg/BookHeart/BookHeart';
+import HomeHeart from '../assets/svg/HomeHeart/HomeHeart';
 import Priest from '../assets/svg/Priest/Priest';
 
 export const menuItems = [
   {
     name: 'Início',
-    icon: ChurchIcon,
+    icon: HomeHeart,
     href: '/',
   },
   {

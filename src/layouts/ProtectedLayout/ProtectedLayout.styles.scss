@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: 16.25em 1fr;
-  background-color: var(--primary-background);
+  border-color: var(--primary-background);
 }
 
 .side-menu {
@@ -10,9 +10,10 @@
   height: 100vh;
 }
 
-.header {
-  height: 6.25em;
+header {
+  margin: 2em;
   padding-block: 1.25em;
+  max-height: 6.5em;
 }
 
 .main-container {

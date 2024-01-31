@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  &__separator {
+    border-color: var(--color-black);
+    display: inline-block;
+    height: 100%;
+    width: 0.06em;
+  }
+
+  &__end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7em;
+  }
+
+  &__username {
+    font-size: 0.875rem;
+  }
+}
