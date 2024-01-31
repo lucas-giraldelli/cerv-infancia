@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite';
 import dns from 'dns';
-import million from 'million/compiler';
+
 import react from '@vitejs/plugin-react';
+import million from 'million/compiler';
+import { defineConfig } from 'vite';
 
 dns.setDefaultResultOrder('verbatim');
 
