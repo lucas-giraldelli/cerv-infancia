@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
+import MainHeader from '../../components/MainHeader/MainHeader';
 import SideMenu from '../../components/SideMenu/SideMenu';
 
 import './ProtectedLayout.styles.scss';
@@ -17,8 +18,8 @@ function ProtectedLayout() {
         <SideMenu />
       </nav>
       <div className="main-container">
-        <header className="header">
-          <h1>Instituto da criança</h1>
+        <header>
+          <MainHeader />
         </header>
         <Outlet />
       </div>
