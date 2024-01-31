@@ -3,7 +3,7 @@
   justify-content: space-between;
 
   &__separator {
-    background-color: var(--color-black);
+    border-color: var(--color-black);
     display: inline-block;
     height: 100%;
     width: 0.06em;
