@@ -77,7 +77,6 @@ function StickyTable(props: StickyTableProps) {
                 return (
                   <TableRow hover tabIndex={-1} key={row.regNumber}>
                     {columns.map((column) => {
-                      console.log({ column, row });
                       const value = row[column.id];
                       return (
                         <TableCell key={column.id} align={column.align}>
