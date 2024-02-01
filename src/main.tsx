@@ -1,5 +1,6 @@
+/* eslint-disable react/no-deprecated */
 import * as React from 'react';
-import { createRoot } from 'react-dom/client';
+import { render } from 'react-dom/';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -9,12 +10,13 @@ import { Router } from './Router';
 
 const queryClient = new QueryClient();
 
-createRoot(document.getElementById('root')!).render(
+render(
   <React.StrictMode>
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
         <Router />
       </QueryClientProvider>
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );

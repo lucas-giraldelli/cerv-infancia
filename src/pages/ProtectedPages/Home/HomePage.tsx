@@ -1,9 +1,9 @@
 import { For } from 'million/react';
 
 import Card from '../../../components/Card';
-import './HomePage.styles.scss';
 import { Table } from '../../../components/Table';
 import { mockCardData, mockTableData } from '../../../mocks/HomePageMocks';
+import './HomePage.styles.scss';
 
 function HomePage() {
   const cardData = mockCardData();
@@ -16,7 +16,7 @@ function HomePage() {
           {(student) => <Card title={student.title} amount={student.amount} />}
         </For>
       </section>
-      <section>
+      <section className="main-container-home__table">
         <Table rows={rows} />
       </section>
     </main>
