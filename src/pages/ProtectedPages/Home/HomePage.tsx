@@ -2,36 +2,23 @@ import { For } from 'million/react';
 
 import Card from '../../../components/Card';
 import './HomePage.styles.scss';
-
-function mockCardData() {
-  return [
-    {
-      title: 'Alunos matrículados',
-      amount: 60,
-    },
-    {
-      title: 'Alunos Nível 1',
-      amount: 43,
-    },
-    {
-      title: 'Alunos Nível 2',
-      amount: 45,
-    },
-    {
-      title: 'Evangelizadores',
-      amount: 64,
-    },
-  ];
-}
+import { Table } from '../../../components/Table';
+import { mockCardData, mockTableData } from '../../../mocks/HomePageMocks';
 
 function HomePage() {
-  const students = mockCardData();
+  const cardData = mockCardData();
+  const rows = mockTableData();
 
   return (
-    <main className="card-container">
-      <For each={students}>
-        {(student) => <Card title={student.title} amount={student.amount} />}
-      </For>
+    <main className="main-container-home">
+      <section className="main-container-home__card">
+        <For each={cardData}>
+          {(student) => <Card title={student.title} amount={student.amount} />}
+        </For>
+      </section>
+      <section>
+        <Table rows={rows} />
+      </section>
     </main>
   );
 }
