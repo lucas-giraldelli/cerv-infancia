@@ -2,6 +2,8 @@ import { ThemeProvider, createTheme } from '@mui/material';
 import MaterialTable from 'material-table';
 import { useRef } from 'react';
 
+import './SearchTable.styles.scss';
+
 import { TABLE_COLUMNS } from '../../mocks/HomePageMocks';
 
 export interface StudentData {
@@ -26,7 +28,7 @@ function SearchTable(props: SearchTableProps) {
     <ThemeProvider theme={defaultMaterialTheme}>
       <MaterialTable
         tableRef={tableRef}
-        title=""
+        title="Listagem de Alunos"
         columns={TABLE_COLUMNS}
         data={rows}
         localization={{
@@ -54,10 +56,13 @@ function SearchTable(props: SearchTableProps) {
           search: true,
           maxBodyHeight: '365px',
           headerStyle: {
+            color: '#FFFFFF',
+            backgroundColor: '#1e2848',
             fontSize: '0.9em',
           },
-          editCellStyle: {
-            fontSize: '0.9em',
+          rowStyle: {
+            color: '#000000',
+            backgroundColor: '#eaf4f6',
           },
         }}
       />

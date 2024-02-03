@@ -7,7 +7,7 @@ function MainHeader() {
   return (
     <section className="header">
       <article className="header__start">
-        <p>Instituto da criança</p>
+        <p>INSTITUTO DA CRIANÇA</p>
       </article>
       <article className="header__end">
         <CalendarMonth />

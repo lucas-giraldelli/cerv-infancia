@@ -26,7 +26,7 @@
     width: clamp(20em, 22em, 90vw);
     height: clamp(20em, 22em, 90vw);
 
-    background: #ffffff;
+    background: var(--grey-white);
     border-radius: 2.5em;
 
     & > label {
@@ -38,11 +38,12 @@
       margin: 0 0 2em;
       padding: 0 1em;
 
-      background: #efefef;
+      background: var(--color-white);
       border-radius: 1em;
     }
 
     & > button {
+      color: var(--grey-white);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -52,7 +53,7 @@
 
       cursor: pointer;
 
-      background: #67abae;
+      background: var(--dark-blue);
       border-radius: 1em;
     }
   }

@@ -11,19 +11,25 @@
   --color-white: hsl(0, 0%, 100%);
   --color-black: hsl(0, 0%, 0%);
 
+  /** new theme */
+  --acqua-green: hsl(134, 43%, 50%);
+  --sky-blue: hsl(192, 92%, 40%);
+  --dark-blue: hsl(226, 42%, 20%);
+  --grey-white: hsl(190, 38%, 94%);
+
   /** Html element vars */
   --primary-hr-color: hsl(234, 7%, 27%);
   --primary-h2-color: hsl(232, 9%, 67%);
 
   /** Component vars */
-  --primary-tab-color: hsl(232, 9%, 67%);
+  --primary-tab-color: var(--grey-white);
 
-  --tab-active-color: hsl(231, 100%, 93%);
-  --tab-active-bg-color: hsl(234, 7%, 27%);
-  --tab-active-bg-color-100: hsl(234, 7%, 29%);
+  --tab-active-color: hsl(190, 38%, 96%);
+  --tab-active-bg-color: hsl(226, 42%, 29%);
+  --tab-active-bg-color-100: hsl(226, 42%, 32%);
 
-  --tab-inactive-bg-color: hsl(233, 8%, 23%);
-  --tab-inactive-bg-color-600: hsl(233, 8%, 21%);
+  --tab-inactive-bg-color: var(--dark-blue);
+  --tab-inactive-bg-color-600: var(--tab-active-bg-color);
 
   /** Utility vars */
   --text-shadow-color: hsla(0, 0%, 0%, 0.25);

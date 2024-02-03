@@ -2,7 +2,6 @@ import './SideMenu.styles.scss';
 
 import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { For } from 'million/react';
 
 import MenuTab from './MenuTab';
 import { menuItems } from '../../constants/SideMenu.constants';
@@ -13,16 +12,14 @@ function SideMenu() {
       <div className="titleBox">
         <h2>Menu</h2>
       </div>
-      <For each={menuItems} as="div">
-        {({ href, name, icon: MenuIcon }) => (
-          <nav key={href} className="tabsContainer navitagion">
-            <MenuTab href={href}>
-              <MenuIcon />
-              <span>{name}</span>
-            </MenuTab>
-          </nav>
-        )}
-      </For>
+      {menuItems.map(({ href, name, icon: MenuIcon }) => (
+        <nav key={href} className="tabsContainer navitagion">
+          <MenuTab href={href}>
+            <MenuIcon />
+            <span>{name}</span>
+          </MenuTab>
+        </nav>
+      ))}
       <hr />
       <>
         <nav className="tabsContainer configs">
