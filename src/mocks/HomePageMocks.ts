@@ -1,6 +1,6 @@
 import { StudentData } from '../components/Table/SearchTable';
 
-export const TABLE_COLUMNS = [
+export const STUDENT_TABLE_COLUMNS = [
   { field: 'regNumber', title: 'Número de Matricula', width: '100' },
   { field: 'name', title: 'Nome do Aluno' },
   { field: 'dob', title: 'Data de nascimento', width: '100' },

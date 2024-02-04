@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
 
+  &__start {
+    font-weight: 600;
+  }
+
   &__separator {
     border-color: var(--color-black);
     display: inline-block;

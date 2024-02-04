@@ -3,8 +3,17 @@ import MaterialTable from 'material-table';
 import { useRef } from 'react';
 
 import './SearchTable.styles.scss';
-
-import { TABLE_COLUMNS } from '../../mocks/HomePageMocks';
+import {
+  EMPTY_DATASOURCE_MESSAGE,
+  FILTER_ROW_TOOLTIP,
+  HEADER_ACTIONS,
+  LABEL_DISPLAYED_ROWS,
+  LABEL_ROWS_PER_PAGE,
+  LABEL_ROWS_SELECT,
+  N_ROWS_SELECTED,
+  SEARCH_PLACEHOLDER,
+  SEARCH_TOOLTIP,
+} from '../../constants/Global.constants';
 
 export interface StudentData {
   regNumber: number;
@@ -15,40 +24,46 @@ export interface StudentData {
 }
 
 type SearchTableProps = {
+  columns: Array<{
+    field: string;
+    title: string;
+    width?: string;
+  }>;
   rows: StudentData[];
+  title: string;
 };
 
 function SearchTable(props: SearchTableProps) {
   const tableRef = useRef();
 
-  const { rows } = props;
+  const { columns, rows, title } = props;
   const defaultMaterialTheme = createTheme();
 
   return (
     <ThemeProvider theme={defaultMaterialTheme}>
       <MaterialTable
         tableRef={tableRef}
-        title="Listagem de Alunos"
-        columns={TABLE_COLUMNS}
+        title={title}
+        columns={columns}
         data={rows}
         localization={{
           pagination: {
-            labelDisplayedRows: '{from}-{to} de {count}',
-            labelRowsPerPage: 'Linhas por página',
-            labelRowsSelect: 'Linha(s)',
+            labelDisplayedRows: LABEL_DISPLAYED_ROWS,
+            labelRowsPerPage: LABEL_ROWS_PER_PAGE,
+            labelRowsSelect: LABEL_ROWS_SELECT,
           },
           toolbar: {
-            nRowsSelected: '{0} row(s) selected',
-            searchTooltip: 'Digite algo',
-            searchPlaceholder: 'Buscar por informação',
+            nRowsSelected: N_ROWS_SELECTED,
+            searchTooltip: SEARCH_TOOLTIP,
+            searchPlaceholder: SEARCH_PLACEHOLDER,
           },
           header: {
-            actions: 'Actions',
+            actions: HEADER_ACTIONS,
           },
           body: {
-            emptyDataSourceMessage: 'Nenhum dado a ser mostrado',
+            emptyDataSourceMessage: EMPTY_DATASOURCE_MESSAGE,
             filterRow: {
-              filterTooltip: 'Filtrar',
+              filterTooltip: FILTER_ROW_TOOLTIP,
             },
           },
         }}

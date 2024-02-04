@@ -1,6 +1,11 @@
 import Card from '../../../components/Card';
 import { Table } from '../../../components/Table';
-import { mockCardData, mockTableData } from '../../../mocks/HomePageMocks';
+import { STUDENT_TABLE_TITLE } from '../../../constants/Global.constants';
+import {
+  STUDENT_TABLE_COLUMNS,
+  mockCardData,
+  mockTableData,
+} from '../../../mocks/HomePageMocks';
 import './HomePage.styles.scss';
 
 function HomePage() {
@@ -19,7 +24,11 @@ function HomePage() {
         ))}
       </section>
       <section className="main-container-home__table">
-        <Table rows={rows} />
+        <Table
+          columns={STUDENT_TABLE_COLUMNS}
+          rows={rows}
+          title={STUDENT_TABLE_TITLE}
+        />
       </section>
     </main>
   );
