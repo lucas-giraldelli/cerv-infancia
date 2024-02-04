@@ -1,8 +1,11 @@
-import { For } from 'million/react';
-
 import Card from '../../../components/Card';
 import { Table } from '../../../components/Table';
-import { mockCardData, mockTableData } from '../../../mocks/HomePageMocks';
+import { STUDENT_TABLE_TITLE } from '../../../constants/Global.constants';
+import {
+  STUDENT_TABLE_COLUMNS,
+  mockCardData,
+  mockTableData,
+} from '../../../mocks/HomePageMocks';
 import './HomePage.styles.scss';
 
 function HomePage() {
@@ -12,12 +15,20 @@ function HomePage() {
   return (
     <main className="main-container-home">
       <section className="main-container-home__card">
-        <For each={cardData}>
-          {(student) => <Card title={student.title} amount={student.amount} />}
-        </For>
+        {cardData.map((student) => (
+          <Card
+            key={student.title}
+            title={student.title}
+            amount={student.amount}
+          />
+        ))}
       </section>
       <section className="main-container-home__table">
-        <Table rows={rows} />
+        <Table
+          columns={STUDENT_TABLE_COLUMNS}
+          rows={rows}
+          title={STUDENT_TABLE_TITLE}
+        />
       </section>
     </main>
   );

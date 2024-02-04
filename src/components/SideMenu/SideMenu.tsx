@@ -2,30 +2,31 @@ import './SideMenu.styles.scss';
 
 import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { For } from 'million/react';
 
 import MenuTab from './MenuTab';
+import sideMenuLogo from '../../assets/images/sidemenu_logo.png';
 import { menuItems } from '../../constants/SideMenu.constants';
 
 function SideMenu() {
   return (
-    <div className="sideMenu">
-      <div className="titleBox">
-        <h2>Menu</h2>
+    <div className="side-menu">
+      <div className="side-menu__title-box">
+        <img src={sideMenuLogo} className="side-menu__logo" />
       </div>
-      <For each={menuItems} as="div">
-        {({ href, name, icon: MenuIcon }) => (
-          <nav key={href} className="tabsContainer navitagion">
-            <MenuTab href={href}>
-              <MenuIcon />
-              <span>{name}</span>
-            </MenuTab>
-          </nav>
-        )}
-      </For>
-      <hr />
+      {menuItems.map(({ href, name, icon: MenuIcon }) => (
+        <nav
+          key={href}
+          className="side-menu__tabs-container side-menu--navitagion"
+        >
+          <MenuTab href={href}>
+            <MenuIcon />
+            <span>{name}</span>
+          </MenuTab>
+        </nav>
+      ))}
+      <hr className="side-menu__horizontal" />
       <>
-        <nav className="tabsContainer configs">
+        <nav className="side-menu__tabs-container side-menu--configs">
           <MenuTab href="/config">
             <SettingsIcon />
             <span>Configurações</span>

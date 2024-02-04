@@ -4,7 +4,7 @@ export default function HomeHeart() {
   return (
     <SvgIcon>
       <svg
-        fill="#a3a5b2"
+        fill="#F2F7F8"
         width="800px"
         height="800px"
         viewBox="0 0 24 24"

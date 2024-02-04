@@ -13,7 +13,7 @@ export default function Priest() {
       >
         <g
           transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-          fill="#a3a5b2"
+          fill="#F2F7F8"
           stroke="none"
         >
           <path
