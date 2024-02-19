@@ -4,16 +4,24 @@
   gap: 0.25em;
 
   label {
-    color: #6f7482;
+    color: var(--primary-label-color);
   }
 
   input {
     color: var(--color-white);
     padding: 0.75em 0.5em;
-    background-color: #aa6ca07d;
+    background-color: var(--modal-input-color-pink);
     border-radius: 0.25em;
 
     min-width: 15em;
+  }
+
+  &.orangebg input {
+    background-color: var(--modal-input-color-orange);
+  }
+
+  &.bluebg input {
+    background-color: var(--modal-input-color-blue);
   }
 
   /* Chrome, Safari, Edge, Opera */

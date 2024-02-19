@@ -5,21 +5,16 @@ type InputTextProps = {
   label: string;
   placeholder?: string;
   type?: string;
-  bgColor?: string;
+  bgColor?: 'orangebg' | 'bluebg';
 };
 
 function InputText(props: InputTextProps) {
   const { htmlFor, label, placeholder, type = 'text', bgColor } = props;
 
   return (
-    <div className="inputText">
+    <div className={`inputText ${bgColor}`}>
       <label htmlFor={htmlFor}>{label}</label>
-      <input
-        type={type}
-        name={htmlFor}
-        placeholder={placeholder}
-        style={{ backgroundColor: `${bgColor}` }}
-      />
+      <input type={type} name={htmlFor} placeholder={placeholder} />
     </div>
   );
 }

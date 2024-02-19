@@ -17,8 +17,8 @@ function InputSelect(props: InputSelectProps) {
   return (
     <div className="inputSelect">
       <label htmlFor={htmlFor}>{label}</label>
-      <select name={htmlFor}>
-        <option value="" disabled selected>
+      <select name={htmlFor} defaultValue="">
+        <option value="" disabled>
           {placeholder}
         </option>
         {options &&

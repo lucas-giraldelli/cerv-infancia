@@ -4,13 +4,13 @@
   gap: 0.25em;
 
   label {
-    color: #6f7482;
+    color: var(--primary-label-color);
   }
 
   select {
     color: var(--color-white);
     padding: 0.75em 0.0625em;
-    background-color: #aa6ca07d;
+    background-color: var(--modal-input-color-pink);
     border-radius: 0.25em;
 
     min-width: 17.1875em;
@@ -18,6 +18,6 @@
   }
 
   select:focus {
-    border: solid 2px black;
+    border: solid 2px var(--color-black);
   }
 }
