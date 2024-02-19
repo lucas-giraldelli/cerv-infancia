@@ -1,0 +1,23 @@
+.inputSelect {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+
+  label {
+    color: #6f7482;
+  }
+
+  select {
+    color: var(--color-white);
+    padding: 0.75em 0.0625em;
+    background-color: #aa6ca07d;
+    border-radius: 0.25em;
+
+    min-width: 17.1875em;
+    border: solid 2px transparent;
+  }
+
+  select:focus {
+    border: solid 2px black;
+  }
+}

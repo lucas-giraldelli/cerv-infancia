@@ -1,0 +1,87 @@
+.modal-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  background-color: var(--color-white);
+  // border: 2px solid #000;
+  box-shadow: 24px;
+
+  padding: 1em 10em;
+  border-radius: 2.5em;
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.avatar-input {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5em;
+  justify-content: center;
+  align-items: center;
+
+  margin-inline: auto;
+
+  margin-bottom: 15px;
+  margin-top: 20px;
+
+  label {
+    color: var(--color-white);
+    padding: 0.8em 0.5em;
+    background-color: var(--acqua-green);
+    border-radius: 0.25em;
+    box-shadow: 1px 4px 10px #8a8a8a;
+    transition: 0.2s ease-out;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+
+    &:active {
+      filter: brightness(70%);
+    }
+  }
+
+  input[type='file'] {
+    display: none;
+  }
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5em 2em;
+
+  margin-bottom: 1em;
+}
+
+.center-box {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.save-button {
+  background-color: #c93756;
+  color: white;
+  padding: 0.75em 1em;
+  border-radius: 0.375em;
+
+  justify-self: center;
+
+  transition: 0.2s ease-out;
+
+  &:hover {
+    filter: brightness(95%);
+  }
+
+  &:active {
+    filter: brightness(70%);
+  }
+}
