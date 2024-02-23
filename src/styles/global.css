@@ -63,3 +63,12 @@ input,
 button {
   border: transparent;
 }
+
+::placeholder {
+  color: var(--color-white);
+  opacity: 1; /* Firefox */
+}
+/* Edge 12-18 */
+::-ms-input-placeholder {
+  color: var(--color-white);
+}

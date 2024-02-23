@@ -2,6 +2,15 @@ import { Avatar, Box, Modal } from '@mui/material';
 import { useState } from 'react';
 
 import './StudentRegisterModal.styles.scss';
+import {
+  AVATAR_SELECT_IMAGE_LABEL,
+  STUDENT_CREATE_MODAL_TITLE,
+} from '../../constants/Global.constants';
+import {
+  mockNivelData,
+  mockSexoData,
+  mockTurmaData,
+} from '../../mocks/StudentRegisterModalMocks';
 import InputSelect from '../InputSelect';
 import InputText from '../InputText';
 
@@ -18,7 +27,7 @@ function StudentRegisterModal(props: StudentRegisterModalProps) {
   return (
     <Modal open={open} onClose={handleClose}>
       <Box className="modal-card">
-        <h2>FICHA DE MATRÍCULA</h2>
+        <h2>{AVATAR_SELECT_IMAGE_LABEL}</h2>
         <div className="avatar-input">
           <Avatar
             src={avatar && URL.createObjectURL(avatar)}
@@ -35,7 +44,7 @@ function StudentRegisterModal(props: StudentRegisterModalProps) {
                 setAvatar(event?.target?.files[0]);
               }}
             />
-            Escolha uma imagem
+            {STUDENT_CREATE_MODAL_TITLE}
           </label>
         </div>
 
@@ -61,31 +70,19 @@ function StudentRegisterModal(props: StudentRegisterModalProps) {
             htmlFor="sexo"
             label="Sexo"
             placeholder="Selecione um sexo"
-            options={[
-              { value: 'masculino', name: 'Masculino' },
-              { value: 'feminino', name: 'Feminino' },
-            ]}
+            options={mockSexoData()}
           />
           <InputSelect
             htmlFor="nivel"
             label="Nível"
             placeholder="Selecione um nível"
-            options={[
-              { value: '1', name: 'Nível 1' },
-              { value: '2', name: 'Nível 2' },
-              { value: '3', name: 'Nível 3' },
-              { value: '4', name: 'Nível 4' },
-            ]}
+            options={mockNivelData()}
           />
           <InputSelect
             htmlFor="turma"
             label="Turma"
             placeholder="Selecione uma turma"
-            options={[
-              { value: 'matutino', name: 'Matutino' },
-              { value: 'verpertino', name: 'Verpertino' },
-              { value: 'noturno', name: 'Noturno' },
-            ]}
+            options={mockTurmaData()}
           />
           <InputText
             htmlFor="responsavel"

@@ -15,9 +15,11 @@ function InputSelect(props: InputSelectProps) {
   const { htmlFor, label, placeholder, options = [] } = props;
 
   return (
-    <div className="inputSelect">
-      <label htmlFor={htmlFor}>{label}</label>
-      <select name={htmlFor} defaultValue="">
+    <div className="input-select">
+      <label className="input-select__label" htmlFor={htmlFor}>
+        {label}
+      </label>
+      <select className="input-select__select" name={htmlFor} defaultValue="">
         <option value="" disabled>
           {placeholder}
         </option>
