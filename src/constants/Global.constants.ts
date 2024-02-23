@@ -14,3 +14,6 @@ export const HEADER_ACTIONS = 'Ações';
 
 export const EMPTY_DATASOURCE_MESSAGE = 'Nenhum dado para mostrar';
 export const FILTER_ROW_TOOLTIP = 'Filtrar';
+
+export const STUDENT_CREATE_MODAL_TITLE = 'FICHA DE MATRÍCULA';
+export const AVATAR_SELECT_IMAGE_LABEL = 'Escolha uma imagem';

@@ -20,6 +20,7 @@
   /** Html element vars */
   --primary-hr-color: hsl(234, 7%, 27%);
   --primary-h2-color: hsl(232, 9%, 67%);
+  --primary-label-color: hsl(224, 8%, 47%);
 
   /** Component vars */
   --primary-tab-color: var(--grey-white);
@@ -31,8 +32,14 @@
   --tab-inactive-bg-color: var(--dark-blue);
   --tab-inactive-bg-color-600: var(--tab-active-bg-color);
 
+  --modal-input-color-pink: hsla(310, 27%, 55%, 0.49);
+  --modal-input-color-blue: hsla(180, 56%, 43%, 0.678);
+  --modal-input-color-orange: hsla(77, 76%, 41%, 0.631);
+  --modal-save-button-red: hsl(347, 57%, 50%);
+
   /** Utility vars */
   --text-shadow-color: hsla(0, 0%, 0%, 0.25);
+  --box-shadow-color: hsl(0, 0%, 54%);
 }
 
 html {
@@ -55,4 +62,13 @@ body {
 input,
 button {
   border: transparent;
+}
+
+::placeholder {
+  color: var(--color-white);
+  opacity: 1; /* Firefox */
+}
+/* Edge 12-18 */
+::-ms-input-placeholder {
+  color: var(--color-white);
 }

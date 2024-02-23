@@ -1,0 +1,39 @@
+.input-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+
+  &__label {
+    color: var(--primary-label-color);
+  }
+
+  &__input {
+    color: var(--color-white);
+    padding: 0.75em 0.5em;
+    background-color: var(--modal-input-color-pink);
+    border-radius: 0.25em;
+
+    min-width: 15em;
+  }
+
+  &.orangebg input {
+    background-color: var(--modal-input-color-orange);
+  }
+
+  &.bluebg input {
+    background-color: var(--modal-input-color-blue);
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  &__input::-webkit-outer-spin-button,
+  &__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  &__input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+}

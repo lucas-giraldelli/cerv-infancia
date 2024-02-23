@@ -1,0 +1,23 @@
+.input-select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+
+  &__label {
+    color: var(--primary-label-color);
+  }
+
+  &__select {
+    color: var(--color-white);
+    padding: 0.75em 0.0625em;
+    background-color: var(--modal-input-color-pink);
+    border-radius: 0.25em;
+
+    min-width: 17.1875em;
+    border: solid 2px transparent;
+  }
+
+  select:focus {
+    border: solid 2px var(--color-black);
+  }
+}
