@@ -12,9 +12,16 @@ function InputText(props: InputTextProps) {
   const { htmlFor, label, placeholder, type = 'text', bgColor } = props;
 
   return (
-    <div className={`inputText ${bgColor}`}>
-      <label htmlFor={htmlFor}>{label}</label>
-      <input type={type} name={htmlFor} placeholder={placeholder} />
+    <div className={`input-text ${bgColor}`}>
+      <label className="input-text__label" htmlFor={htmlFor}>
+        {label}
+      </label>
+      <input
+        className="input-text__input"
+        type={type}
+        name={htmlFor}
+        placeholder={placeholder}
+      />
     </div>
   );
 }

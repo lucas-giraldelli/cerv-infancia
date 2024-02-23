@@ -1,13 +1,13 @@
-.inputText {
+.input-text {
   display: flex;
   flex-direction: column;
   gap: 0.25em;
 
-  label {
+  &__label {
     color: var(--primary-label-color);
   }
 
-  input {
+  &__input {
     color: var(--color-white);
     padding: 0.75em 0.5em;
     background-color: var(--modal-input-color-pink);
@@ -25,14 +25,14 @@
   }
 
   /* Chrome, Safari, Edge, Opera */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
+  &__input::-webkit-outer-spin-button,
+  &__input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
 
   /* Firefox */
-  input[type='number'] {
+  &__input[type='number'] {
     -moz-appearance: textfield;
     appearance: textfield;
   }

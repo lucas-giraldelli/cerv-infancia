@@ -7,9 +7,9 @@ import {
   STUDENT_CREATE_MODAL_TITLE,
 } from '../../constants/Global.constants';
 import {
-  mockNivelData,
-  mockSexoData,
-  mockTurmaData,
+  mockClassData,
+  mockLevelData,
+  mockSexData,
 } from '../../mocks/StudentRegisterModalMocks';
 import InputSelect from '../InputSelect';
 import InputText from '../InputText';
@@ -70,19 +70,19 @@ function StudentRegisterModal(props: StudentRegisterModalProps) {
             htmlFor="sexo"
             label="Sexo"
             placeholder="Selecione um sexo"
-            options={mockSexoData()}
+            options={mockSexData()}
           />
           <InputSelect
             htmlFor="nivel"
             label="Nível"
             placeholder="Selecione um nível"
-            options={mockNivelData()}
+            options={mockLevelData()}
           />
           <InputSelect
             htmlFor="turma"
             label="Turma"
             placeholder="Selecione uma turma"
-            options={mockTurmaData()}
+            options={mockClassData()}
           />
           <InputText
             htmlFor="responsavel"

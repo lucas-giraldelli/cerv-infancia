@@ -1,11 +1,11 @@
-export function mockSexoData() {
+export function mockSexData() {
   return [
     { value: 'masculino', name: 'Masculino' },
     { value: 'feminino', name: 'Feminino' },
   ];
 }
 
-export function mockNivelData() {
+export function mockLevelData() {
   return [
     { value: '1', name: 'Nível 1' },
     { value: '2', name: 'Nível 2' },
@@ -14,7 +14,7 @@ export function mockNivelData() {
   ];
 }
 
-export function mockTurmaData() {
+export function mockClassData() {
   return [
     { value: 'matutino', name: 'Matutino' },
     { value: 'verpertino', name: 'Verpertino' },
