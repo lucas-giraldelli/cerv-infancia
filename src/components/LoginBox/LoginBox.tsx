@@ -10,10 +10,6 @@ function LoginBox() {
         alt="CERV | Casa espírita Rafael Verlangieri"
       />
       <form className="login-container__box">
-        <label>Usuário</label>
-        <input type="text" placeholder="Usuário" />
-        <label>Senha</label>
-        <input type="password" placeholder="Senha" />
         <button type="submit">Entrar</button>
       </form>
     </div>

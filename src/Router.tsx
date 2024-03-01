@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 
 import ProtectedLayout from './layouts/ProtectedLayout';
-import LoginPage from './pages/Login';
+import LoginPage from './pages/Login/Login';
 import Attendance from './pages/ProtectedPages/Attendance';
 import Courseware from './pages/ProtectedPages/Courseware';
 import HomePage from './pages/ProtectedPages/Home';
