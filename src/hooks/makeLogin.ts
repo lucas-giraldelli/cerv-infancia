@@ -8,9 +8,9 @@ const keycloakConfig = {
 
 const keycloak = new Keycloak(keycloakConfig);
 
-async function useAuth(fn: (v: boolean) => void) {
+async function makeLogin(fn: (v: boolean) => void) {
   keycloak
-    .init({ onLoad: 'login-required' })
+    .init({ onLoad: 'login-required', redirectUri: 'http://localhost:8888/' })
     .then((authenticated) => {
       if (authenticated) {
         console.log('User is authenticated');
@@ -24,4 +24,4 @@ async function useAuth(fn: (v: boolean) => void) {
     });
 }
 
-export { keycloak, useAuth };
+export { keycloak, makeLogin };
