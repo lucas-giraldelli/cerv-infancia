@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 
 import ProtectedLayout from './layouts/ProtectedLayout';
-import LoginPage from './pages/Login';
+import LoginPage from './pages/Login/';
 import Attendance from './pages/ProtectedPages/Attendance';
 import Courseware from './pages/ProtectedPages/Courseware';
 import HomePage from './pages/ProtectedPages/Home';
@@ -12,7 +12,7 @@ import Visit from './pages/ProtectedPages/Visit';
 export function Router() {
   return (
     <Routes>
-      <Route path="/login" element={<LoginPage />} />
+      <Route path="/login" index element={<LoginPage />} />
       <Route path="/" element={<ProtectedLayout />}>
         <Route index element={<HomePage />} />
         <Route path="aluno" element={<Student />} />
